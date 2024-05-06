@@ -51,10 +51,6 @@
         <source src="https://github.com/IPPYZ/IPPYZ.github.io/raw/main/Loop.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <audio id="audio-background" autoplay loop>
-        <source src="https://github.com/IPPYZ/IPPYZ.github.io/raw/main/Soundtest.mp3" type="audio/mpeg">
-        Your browser does not support the audio tag.
-    </audio>
     <div class="content">
         <div class="profile-pic">
             <img src="https://img.freepik.com/premium-photo/arabic-calligraphy-wallpaper-wall-with-brown-background-old-paper-interlacing_430468-582.jpg?w=1480" alt="Your Profile Picture">
@@ -63,5 +59,14 @@
         <p>This is where you can find all the information about me.</p>
         <p>Follow me on <a href="https://www.instagram.com/ippyz">Instagram</a>.</p>
     </div>
+
+    <script>
+        // إنشاء عنصر audio
+        var audio = new Audio('https://github.com/IPPYZ/IPPYZ.github.io/raw/main/Soundtest.mp3');
+        // تشغيل الصوت تلقائيًا
+        audio.autoplay = true;
+        // تكرار تشغيل الصوت بشكل مستمر
+        audio.loop = true;
+    </script>
 </body>
 </html>
