@@ -58,15 +58,18 @@
         <h1>Welcome to My Bio Page!</h1>
         <p>This is where you can find all the information about me.</p>
         <p>Follow me on <a href="https://www.instagram.com/ippyz">Instagram</a>.</p>
+        
+        <!-- زر لتشغيل الصوت -->
+        <button onclick="playAudio()">تشغيل الصوت</button>
     </div>
 
     <script>
-        // إنشاء عنصر audio
-        var audio = new Audio('https://github.com/IPPYZ/IPPYZ.github.io/raw/main/Soundtest.mp3');
-        // تشغيل الصوت تلقائيًا
-        audio.autoplay = true;
-        // تكرار تشغيل الصوت بشكل مستمر
-        audio.loop = true;
+        function playAudio() {
+            // الحصول على عنصر الصوت
+            var audio = new Audio('https://github.com/IPPYZ/IPPYZ.github.io/raw/main/Soundtest.mp3');
+            // تشغيل الصوت
+            audio.play();
+        }
     </script>
 </body>
 </html>
