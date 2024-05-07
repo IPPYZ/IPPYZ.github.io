@@ -50,10 +50,10 @@
             background-color: transparent; /* جعل لون الخلفية شفافًا */
         }
         .audio-control.play {
-            background-image: url("https://github.com/IPPYZ/IPPYZ.github.io/raw/main/play.png"); /* تغيير إلى PNG */
+            background-image: url("https://github.com/IPPYZ/IPPYZ.github.io/raw/main/play.svg"); /* تغيير إلى PNG */
         }
         .audio-control.pause {
-            background-image: url("https://github.com/IPPYZ/IPPYZ.github.io/raw/main/pause.png"); /* تغيير إلى PNG */
+            background-image: url("https://github.com/IPPYZ/IPPYZ.github.io/raw/main/pause.svg"); /* تغيير إلى PNG */
         }
         a {
             color: white; /* تغيير لون الروابط إلى أبيض */
@@ -82,12 +82,12 @@
         function toggleAudio() {
             if (audio.paused) {
                 audio.play();
-                document.querySelector('.audio-control').classList.remove('pause');
-                document.querySelector('.audio-control').classList.add('play');
-            } else {
-                audio.pause();
                 document.querySelector('.audio-control').classList.remove('play');
                 document.querySelector('.audio-control').classList.add('pause');
+            } else {
+                audio.pause();
+                document.querySelector('.audio-control').classList.remove('pause');
+                document.querySelector('.audio-control').classList.add('play');
             }
         }
 
