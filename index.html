@@ -44,6 +44,14 @@
             object-fit: cover;
             border-radius: 50%;
         }
+        /* ستايل للزر */
+        .audio-control {
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -58,17 +66,25 @@
         <h1>Welcome to My Bio Page!</h1>
         <p>This is where you can find all the information about me.</p>
         <p>Follow me on <a href="https://www.instagram.com/ippyz">Instagram</a>.</p>
-        
-        <!-- زر لتشغيل الصوت -->
-        <button onclick="playAudio()">تشغيل الصوت</button>
+
+        <!-- الصورة للتحكم في الصوت -->
+        <button class="audio-control" onclick="toggleAudio()"></button>
     </div>
 
+    <!-- الصوت -->
+    <audio id="audio" src="https://github.com/IPPYZ/IPPYZ.github.io/raw/main/Soundtest.mp3"></audio>
+
     <script>
-        function playAudio() {
-            // الحصول على عنصر الصوت
-            var audio = new Audio('https://github.com/IPPYZ/IPPYZ.github.io/raw/main/Soundtest.mp3');
-            // تشغيل الصوت
-            audio.play();
+        var audio = document.getElementById('audio');
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                document.querySelector('.audio-control').style.backgroundImage = 'url("https://github.com/IPPYZ/IPPYZ.github.io/raw/main/play.gif")';
+            } else {
+                audio.pause();
+                document.querySelector('.audio-control').style.backgroundImage = 'url("https://github.com/IPPYZ/IPPYZ.github.io/raw/main/pause.gif")';
+            }
         }
     </script>
 </body>
